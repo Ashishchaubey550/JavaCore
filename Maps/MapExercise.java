@@ -43,8 +43,8 @@ public class MapExercise {
         map.put(3, st3);
         System.out.println(map);
 
-        //==============Access Key Values==========
-
+        //==============Access Key ==========
+        System.out.println("Fetching only Keys \n");
         Set keys=map.keySet();
         Iterator st=keys.iterator();
         while (st.hasNext()){
@@ -52,11 +52,19 @@ public class MapExercise {
         }
 
         //======================Access Only Values===============
-
+        System.out.println("Fetching only Values \n");
         Collection val=map.values();
         Iterator str2=val.iterator();
         while (str2.hasNext()) {
-            str2.next();
+            System.out.println(str2.next());
+        }
+
+        //========================Access whole Data=============
+        System.out.println("Fetching Whole Data \n");
+        Set data=map.entrySet();
+        Iterator str3=data.iterator();
+        while (str3.hasNext()) {
+            System.out.println(str3.next());
         }
     }
 }
